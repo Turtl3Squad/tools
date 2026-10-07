@@ -1,0 +1,9 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  install:
+    cmds:
+      - go build -o console ./cmd/console
+      - sudo mv console $(which console || echo /usr/local/bin/console)
